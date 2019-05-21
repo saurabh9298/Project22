@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Registration Form</title>     
+        <link rel="stylesheet" href="style.css" type="text/css">                             
+    </head>
+
+    <body>
+        <div class="tab">
+                <button class="w3-bar-item w3-button" onclick="openCity('form1')" id="b1" onmouseover="increase('b1')" onmouseout="decrease('b1')" style="background-color:lightblue; width: 100px">Applicant login <form action=""></form></button>
+                <button class="w3-bar-item w3-button" onclick="openCity('form2')" id="b2" onmouseover="increase('b2')" onmouseout="decrease('b2')" style="background-color:lightblue; width: 100px">General Information</button>
+                <button class="w3-bar-item w3-button" onclick="openCity('form3')" id="b3" onmouseover="increase('b3')" onmouseout="decrease('b3')" style="background-color:lightblue; width: 100px">Registration form</button>
+                <br> <br> <br><br><br><br><br> </div>
+    <center>
+        
+            <form onsubmit="return goto1()" action="" autocomplete="off" class="ok" id="form1">
+                <fieldset style="background-color: whitesmoke; width: 50%;">
+                <table  align="center" border="0" autocomplete="off" style="font-size:17px;"><br> 
+                    <caption style="color:darkred; font-size:22px">Applicant Login Here</caption>
+                    <tr><td><br>Username:</td><td><br><input type="text" id="text1" name="username" tabindex="1" autofocus="autofocus"></td></tr>
+                    <tr><td><br>Password:</td><td><br><input type="password" id="text2" name="password" tabindex="2"></td></tr>
+                    <tr><td></td><td><br><input type="checkbox" checked="checked"><label style="font-size:16px">    Remember me</label></td></tr>
+                    <br>
+                    <tr><td> <br> <input type="submit" value="Sign in" id="s2" style="background-color: lightgreen" onmouseover="increase('s2')" onmouseout="decrease('s2')"><br><br><br><br></td></tr>
+                </table>
+                
+            </fieldset>
+            </form>
+    </center>
+    <center>
+            <form  onsubmit="return goto2()" autocomplete="off" class="ok" id="form2" style="display:none;">
+                <fieldset id="fd" ><br> 
+                    <div class="form">
+                        <div class="head">
+                            <table id="row">
+                                <label  id="lb1">General Information</label>
+                                <div >
+                                <tr><td><input type="text" name="title" id="text9" placeholder="Title"></td></tr>
+                                <tr><td><br><input type="text" name="firstname" id="text10" placeholder="First Name"></td><td> <br><input type="text" name="lastname" id="text3" placeholder="Last Name"></td></tr>
+                                <tr><td><br><input type="text" name="company" id="text4" placeholder="Company" ></td></tr>
+                                <br>
+                                <tr><td><br><label id="lb2">Contact Details</label></td></tr>
+                                 <tr><td><br><br><input type="text" name="street" id="text5" placeholder="street"></td><td><br><br><input type="text" name="addInfo" id="text6" placeholder="Additional Information"></td></tr>
+                                 <tr><td><br><input type="text" name="country" id="text7" placeholder="country"></td></tr>
+                                 <tr><td><br><input type="mobile" name="contact" id="text8" pattern="[7-9]{1}[0-9]{9}" placeholder="Cotact No."></td></tr>
+                                 <tr><td><br><input type="submit" value="Save" id="save"  onmouseover="increase('save')" onmouseout="decrease('save')" style="background-color: lightblue"></td></tr>
+                                </div>
+                            </table>  
+                            
+                        </div>
+                    </div>
+                </fieldset>
+                </form>
+    </center>
+    <center>
+
+                <form onsubmit="return goto3()" autocomplete="off" class="ok" id="form3" style="display:none;">
+                        <fieldset style="background-color: whitesmoke; width: 70%; height: 60% ">
+                            <label style="color: darkred; font-size: 25px">Registration Form</label>
+                        <table border="0" autocomplete="off" style="font-size:17px;">
+                            <tr></tr><td><label>Name :</label></td><td><input type="text" id="text11" name="fname"></td><td><input type="text" id="text12" name="lname"></td></tr>
+                            <tr><td></td><td><label style="font-size: 13px; color: gray;">First Name</label></td></td><td><label style="font-size: 13px; color: gray">Last Name</label></td></tr>
+                            <tr><td><label>Company :</label></td><td><input type="textarea" id="text13" name="c"></td></tr><br>
+                            <tr><td></td><td><label style="font-size: 13px; color: gray;">Company Name</label></td></td></tr>
+                            <tr><td><label>Email :</label></td><td><input type="email" id="text14" name=" mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td></tr>
+                            <tr><td></td><td><label style="font-size: 13px; color: gray;">example@gmail.com</label></td></td></tr>
+                            <tr></tr><td><label>Phone :</label></td><td><input type="text" id="text15" name="code"></td><td><input type="text" id="text16" name="phone" pattern="[7-9]{1}[0-9]{9}"></td></tr>
+                            <tr><td></td><td><label style="font-size: 13px; color: gray;">Area Code</label></td></td><td><label style="font-size: 13px; color: gray">Phone Number</label></td></tr>
+                            <tr><td><label>Subject :</label></td><td><input type="textarea" id="text17"></td></tr>
+                            <tr><td></td><td><label style="font-size: 13px; color: gray;">Subject Name</label></td></td></tr>
+                            <tr><td><label id="lb3">Married :</label></td><td><input type="radio" name="married" value="yes" id="text18">      <input type="radio" name="married" id="text19" value="no"></td></tr>
+                            <tr><td></td><td><label style="font-size: 13px; color: gray;">Yes  .</label>      <label style="font-size: 13px; color: gray">   No</label></td></tr>
+                            <tr><td></td><td></td><td></td><td><button style="background-color:lightblue" id="reg" onmouseover="increase('reg')" onmouseout="decrease('reg')">Register</button></td></tr>
+                           <br>
+                        </table>
+                       
+                    </fieldset>
+                    </form>
+    </center>
+
+
+        <script src="myScript.js">
+        </script>
+    </body>
+
+</html>
